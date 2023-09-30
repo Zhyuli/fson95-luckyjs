@@ -103,3 +103,64 @@
 //     return newArray
 // }
 // console.log(fillArray(10, 125));
+
+//TODO: 9 ===================================
+// Написати ф-цію, яка прибиратиме з масиву всі значення, які перетворюються на false
+// undefined, null, false, '', 0, NaN
+// const array = [
+//   1,
+//   0,
+//   54,
+//   "doc",
+//   null,
+//   "jpg",
+//   undefined,
+//   "",
+//   "png",
+//   "exe",
+//   false,
+//   "mp4",
+//   NaN,
+//   "hbs",
+// ];
+
+// function clearArray(array) {
+//   const newArray = [];
+//   for (const element of array) {
+//     if (element) {
+//       newArray.push(element);
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(clearArray(array));
+
+//TODO:  ===================================
+// Перевірити два масиву і дізнатися, чи вони рівні
+
+// const arr1 = [1, 4, 6, "color", 324, 232, "list", 11, 9, "dream", 34, 0, -30];
+// const arr2 = [6, "dream", -30, 11, 9, 1, 324, 34, "color", 4, 232, 0, "list"];
+
+// const arr3 = [4, 232, 6, -30, "color", 324, "list", 1, 11, 9, "dream", 34, 0];
+// const arr4 = ["color", 6, -30, 11, 9, 1, "dream", 324, 34, 4, 232, 0, "list"];
+
+// const arr5 = [1, 4, 6, "color", "list", 11, 9, "dream", 34, 0, -30, "lesson"];
+// const arr6 = [6, 324, "dream", -30, 9, 8, 34, "color", 4, 232, 0, "list", 11];
+
+// const arr7 = [1, 4, 6, "color", 324, 232, "list", 11, 9, "dream", 34, 0, -30];
+// const arr8 = [6, "dream", -30, 10, 9, 1, 324, 34, "color", 4, 232, 0, "list"];
+// const arr9 = [1, 2, 3, 4];
+// const arr10 = [1, 2, 3, 4];
+// function checkArray(arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
+//   for (const element of arr1) {
+//     if (!arr2.includes(element)) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(checkArray(arr9, arr10));
+
