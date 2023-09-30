@@ -7,3 +7,21 @@
 // } else {
 //     console.log(false);
 // }
+
+
+//TODO: 2 ===================================
+// У змінній min лежить число від 0 до 59. Визначте у котру чверть години
+// Попадає це число (у першу, другу, третю або четверту).
+
+// const min = 35;
+// if (min >= 0 && min < 15) {
+//     console.log(1);
+// } else if (min >= 15 && min < 30) {
+//     console.log(2);
+// } else if (min >= 30 && min < 45) {
+//     console.log(3);
+// } else if (min >= 45 && min < 60) {
+//     console.log(4);
+// } else {
+//     console.log("error");
+// }
