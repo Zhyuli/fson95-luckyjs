@@ -164,3 +164,22 @@
 // }
 // console.log(checkArray(arr9, arr10));
 
+//TODO: ===================================
+//Напиши функцію findSmallerNumber(numbers)
+//яка шукає найменше число в масиві.
+//Додай перевірку що функція отримує масив
+//  const numbers = [2, 5, 35, 56, 12, 24, 1, 80, 3];
+
+// function findSmallerNumber(array) {
+//     if (!Array.isArray(array)) {
+//        return console.log("arguments must be an array");
+//     }
+//     let min = array[0]
+//    for (const number of array) {
+//     if (min > number) {
+//         min = number;
+//     }
+//     } 
+//     return min;
+// }
+// console.log(findSmallerNumber(numbers));
