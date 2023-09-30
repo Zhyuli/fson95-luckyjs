@@ -8,7 +8,6 @@
 //     console.log(false);
 // }
 
-
 //TODO: 2 ===================================
 // У змінній min лежить число від 0 до 59. Визначте у котру чверть години
 // Попадає це число (у першу, другу, третю або четверту).
@@ -33,20 +32,50 @@
 
 // const min = 5;
 // switch (min) {
-//     case 1: 
+//     case 1:
 //         console.log("winter");
 //         break;
-//   case 2: 
+//   case 2:
 //         console.log("spring");
 //         break;
-//       case 3: 
+//       case 3:
 //         console.log("summer");
 //         break;
-//       case 4: 
+//       case 4:
 //         console.log("autumn");
 //         break;
-    
+
 //     default:
 //         console.log("error");
 //         break;
 // }
+
+//TODO: 4 ===================================
+// скористаємося циклом while та виведіть у консоль числа від 0 до 50
+// let i = 0;
+// while (i <= 50) {
+//     console.log(i);
+//     i += 1;
+// }
+//TODO: 5 ===================================
+//Напишіть цикл, який виводить у консоль
+// числа від max до min за спаданням
+// Додайте усі парні числа від min до max
+// const min = 0;
+// const max = 100;
+// let sum = 0;
+// for (let i = max; i > min; i -= 1) {
+//     if (i % 2 === 0) {
+//         console.log("Парні числа: ", i);
+//       sum += i;   
+//   }
+// }
+// console.log("Сума усіх парних чисел: ", sum);
+// let sum1 = 0
+// const numbers = [1, 2, 4, 5, 6]; 
+// for (const number of numbers) {
+//     sum1 += number;
+// }
+// console.log("Сума всіх чисел: ",  sum1);
+
+
