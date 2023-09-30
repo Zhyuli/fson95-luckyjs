@@ -67,15 +67,39 @@
 // for (let i = max; i > min; i -= 1) {
 //     if (i % 2 === 0) {
 //         console.log("Парні числа: ", i);
-//       sum += i;   
+//       sum += i;
 //   }
 // }
 // console.log("Сума усіх парних чисел: ", sum);
 // let sum1 = 0
-// const numbers = [1, 2, 4, 5, 6]; 
+// const numbers = [1, 2, 4, 5, 6];
 // for (const number of numbers) {
 //     sum1 += number;
 // }
 // console.log("Сума всіх чисел: ",  sum1);
 
+//TODO: 7 ===================================
+//Даний рядок, що складається із символів, наприклад, 'abcde'.
+// Перевірте, що першим символом цього рядка є буква 'a'.
+// Якщо це так - виведіть 'так', інакше виведіть 'ні'.
 
+// const string = 'abcde';
+// if (string.startsWith('a')) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
+// string.startsWith('a') ? console.log(true) : console.log(false)
+
+//TODO: 8 ===================================
+// Написати ф-цію, яка створює масив із зазначеною довжиною та наповнює його переданим значенням
+// приклад: ф-ція fillArray(3, 'a') повинна повертати масив ['a', 'a', 'a']
+
+// function fillArray(length, value) {
+//     let newArray = []
+//     for (let i = 0; i < length; i += 1) {
+//         newArray.push(value);
+//     }
+//     return newArray
+// }
+// console.log(fillArray(10, 125));
