@@ -127,7 +127,15 @@
 
 //TODO:=========task-7==============
 // Потрібно перебрати об'єкти та вивести ім'я кращого співробітника
-
+ 
+// function findBestEmployee(employees) { 
+//     const value = Object.values(employees); 
+//     for (const key in employees) {
+//         if (employees[key] === Math.max(...value)) { 
+//             return `The best employee: ${key}`; 
+//         }
+//     }
+// }
 // console.log(
 //   findBestEmployee({
 //     ann: 29,
@@ -163,15 +171,27 @@
 // повертатись перше парне число. При використанні другого - має повертатись перше слово у масиві, що починається з літери
 // "O" у будь - якому реєстрі.
 
-// const numbers = [1, 3, 5, 7, 9, 20];
+// const numbers = [2, 3, 5, 7, 9, 20];
 // const words = ['apple', 'banana', 'orange', 'pear'];
 
 //! Зауважте, що використання методу forEach не дозволяє прямо вийти з циклу після знаходження першого підходящого елемента. Тому ми використовуємо додаткову змінну result, щоб зберегти перший підходящий елемент та перевіряти, чи він вже був знайдений. forEach нічого не повертає, а просто перебирає масив!
 
 // Перший колбек: перше парне число
-
+// function isEven(num) { 
+//     return num % 2 === 0; 
+// }
+// function findElement(array, callback) { 
+//     for (const element of array) {
+//         if (callback(element)) { 
+//             return element;
+//         }
+//     }
+//     return null
+// }
 // Другий колбек: перше слово, що починається з літери "O" у будь-якому регістрі
-
+// function startsWithO(array) {
+//   return array.toLowerCase().startsWith("o");
+// }
 // const res1 = findElement(numbers, isEven);
 // console.log(res1);
 
