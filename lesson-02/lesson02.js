@@ -128,11 +128,11 @@
 //TODO:=========task-7==============
 // Потрібно перебрати об'єкти та вивести ім'я кращого співробітника
  
-// function findBestEmployee(employees) { 
-//     const value = Object.values(employees); 
+// function findBestEmployee(employees) {
+//     const value = Object.values(employees);
 //     for (const key in employees) {
-//         if (employees[key] === Math.max(...value)) { 
-//             return `The best employee: ${key}`; 
+//         if (employees[key] === Math.max(...value)) {
+//             return `The best employee: ${key}`;
 //         }
 //     }
 // }
@@ -177,12 +177,12 @@
 //! Зауважте, що використання методу forEach не дозволяє прямо вийти з циклу після знаходження першого підходящого елемента. Тому ми використовуємо додаткову змінну result, щоб зберегти перший підходящий елемент та перевіряти, чи він вже був знайдений. forEach нічого не повертає, а просто перебирає масив!
 
 // Перший колбек: перше парне число
-// function isEven(num) { 
-//     return num % 2 === 0; 
+// function isEven(num) {
+//     return num % 2 === 0;
 // }
-// function findElement(array, callback) { 
+// function findElement(array, callback) {
 //     for (const element of array) {
-//         if (callback(element)) { 
+//         if (callback(element)) {
 //             return element;
 //         }
 //     }
@@ -202,6 +202,12 @@
 //TODO:=========task-02=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Створіть новий масив, що містить квадрати кожного елементу вхідного масиву. Очікуваний результат: [1, 4, 9, 16, 25].
 
+// const numbers = [1, 2, 3, 4, 5];
+
+// const getNewArray = (array) => array.map(number => Math.pow(number, 2))
+
+// console.log(getNewArray(numbers));
+
 //TODO:=========task-03=================
 // Дано масив об'єктів {id: 1, values: [1, 2, 3]}, {id: 2, values: [4, 5, 6]}, {id: 3, values: [7, 8, 9]}. Створіть новий масив, що містить всі значення з масивів values кожного об'єкту, збережених в одному масиві. Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
@@ -211,6 +217,7 @@
 //   { id: 3, values: [7, 8, 9] },
 // ];
 
+// const flatArray = (array) => array.flatMap(item => item.values)
 // const res = flatArray(data);
 // console.log(res);
 
@@ -223,6 +230,7 @@
 //   { name: 'Bob', age: 19 },
 // ];
 
+// const checkAge = (array) => array.some(({ age }) => age < 20)
 // const res = checkAge(people);
 // console.log(res);
 
