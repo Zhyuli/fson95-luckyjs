@@ -9,12 +9,21 @@
 // ключ:значення використовуючи Object.keys() і for...of
 
 // const user = {
-//   name: 'John',
+//   name: "John",
 //   age: 30,
-//   hobby: 'reading',
+//   hobby: "reading",
 //   premium: true,
 // };
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+// const keys = Object.keys(user);
+// for (const key of keys) {
+//     // console.log(key);
+//     console.log(`${key}: ${user[key]}`);
+// }
 
+// console.log(user);
 // Додати поле mood зі значенням 'happy'
 
 // Замінити hobby на 'skydiving'
@@ -36,7 +45,12 @@
 
 // ? Варіант 1
 
+// function getBool(obj, value) {
+//     const keys = Object.keys(obj) 
+//     return keys.includes(value) ? true : false;
+// }
 // ? Варіант 2
+// const getBool = (obj, key) =>  key in obj; 
 
 // console.log(getBool(obj, 'car')); // true
 
