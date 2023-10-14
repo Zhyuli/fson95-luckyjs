@@ -46,11 +46,11 @@
 // ? Варіант 1
 
 // function getBool(obj, value) {
-//     const keys = Object.keys(obj) 
+//     const keys = Object.keys(obj)
 //     return keys.includes(value) ? true : false;
 // }
 // ? Варіант 2
-// const getBool = (obj, key) =>  key in obj; 
+// const getBool = (obj, key) =>  key in obj;
 
 // console.log(getBool(obj, 'car')); // true
 
@@ -62,10 +62,18 @@
 // Якщо об'єкт salaries порожній, то результат має бути 0
 
 // const salaries = {
-//   Mango: 100,
-//   Poly: 160,
-//   Ajax: 1470,
+//     Mango: 100,
+//     Poly: 160,
+//     Ajax: 1470,
 // };
+
+// let sum = 0;
+
+// const valuesArray = Object.values(salaries);
+
+// for (const value of valuesArray) {
+//     sum += value;
+// }
 
 // console.log(sum);
 
@@ -74,7 +82,16 @@
 // новий об'єкт без зазначених параметрів
 // Очікуваний результат ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
 
-// console.logs(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a')); // {c: 3}
+// function updateObject(obj, ...removeKeys) {
+//     let newObj = { ...obj };
+//     for (const key of removeKeys) {
+//         delete newObj[key];
+//     }
+//     return newObj;
+
+// }
+
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a')); // {c: 3}
 
 //TODO:============task-6================
 // Створіть функцію multiplyNumeric(obj),
@@ -82,10 +99,22 @@
 
 // до виклику функції
 // let menu = {
-//   width: 200,
-//   height: 300,
-//   title: 'My menu',
+//     width: 200,
+//     height: 300,
+//     title: 'My menu',
 // };
+
+// function multiplyNumeric(obj) {
+//     for (const key in obj) {
+//         if (obj.hasOwnProperty(key)) {
+//             if (typeof obj[key] === "number") {
+//                 obj[key] *= 2;
+//             }
+
+//         }
+//     }
+//     return obj;
+// }
 
 // console.log(multiplyNumeric(menu));
 
