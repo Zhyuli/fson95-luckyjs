@@ -127,7 +127,7 @@
 
 //TODO:=========task-7==============
 // Потрібно перебрати об'єкти та вивести ім'я кращого співробітника
- 
+
 // function findBestEmployee(employees) {
 //     const value = Object.values(employees);
 //     for (const key in employees) {
@@ -236,9 +236,10 @@
 
 //TODO:=========task-05=================
 //  Дано масив чисел [2, 4, 6, 8, 10]. Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
-
 // const numbers = [2, 4, 6, 8, 10];
-
+// const checkEvenArray = (numbers) => {
+//   return numbers.every((every) => every % 2 === 0);
+// };
 // const res = checkEvenArray(numbers);
 // console.log(res);
 
@@ -246,23 +247,23 @@
 // Знайдіть перше непарне число
 
 // const numbers = [2, 1, 6, 8, 9, 10, 12];
-
-// console.log('numbers: ', numbers);
-// console.log('oddNumber: ', oddNumberInArray);
+// const oddNumberInArray = (numbers) => numbers.find((element) => element % 2 !== 0);
+// console.log("numbers: ", numbers);
+// console.log("oddNumber: ", oddNumberInArray(numbers));
 
 //TODO:=========task-07=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
 // const numbersArray = [4, 2, 5, 1, 3];
-
+// const sortedArray = (array) => [...array].sort((a, b) => a - b);
 // const res = sortedArray(numbersArray);
 // console.log(res);
-
+// console.log(numbersArray);
 //TODO:===============task-08===============================
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
 
-// const stringArray = ['banana', 'orange', 'apple', 'pear'];
-
+// const stringArray = ["banana", "orange", "apple", "pear"];
+// const sortedArray = (array) => [...array].sort((a, b) => a.localeCompare(b));
 // const res = sortedArray(stringArray);
 // console.log(res);
 
@@ -270,19 +271,19 @@
 // Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
 // const user = [
-//   { name: 'John', age: 27 },
-//   { name: 'Jane', age: 31 },
-//   { name: 'Bob', age: 19 },
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
 // ];
-
+// const getAge = (array, age) => array.filter((element) => element.age >= age);
 // const res = getAge(user, 25);
-// console.log('object :>> ', res);
-
+// console.log("object :>> ", res);
+// console.log(user);
 //TODO:=========task-10=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
 
 // const numbers = [1, 2, 3, 4, 5];
-
+// const sum = (array) => array.reduce((acc, element) => acc += element, 0);
 // const res = sum(numbers);
 // console.log(res);
 
@@ -290,6 +291,30 @@
 // У вас є масив чисел, і вам потрібно знайти середнє значення цих чисел. Напишіть функцію, яка приймає масив чисел і повертає середнє значення.
 
 // const arr = [1, 2, 3, 4, 5];
-
+// const averageValue = (array) => array.reduce((acc, number ,_, arr) => acc + number / arr.length, 0);
 // const res = averageValue(arr);
 // console.log(res);
+
+// const people = [
+//     { 
+//         name: "Alex", 
+//         age: 55, 
+//     },
+//     { 
+//         name: "Oleh", 
+//         age: 21, 
+//     },
+//     { 
+//         name: "Adnrian", 
+//         age: 28, 
+//     },
+//     { 
+//         name: "Maria", 
+//         age: 35, 
+//     },
+// ]
+// const newArray = (array) => array
+//     .map(({ name }) => name)
+//     .sort((a, b) => a.localeCompare(b))
+//     .find((name) => name === 'Oleh');
+// console.log(newArray(people));
