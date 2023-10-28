@@ -109,26 +109,57 @@ function callAction(callback) {
  * - методи add, substruct, divide, multiply
  * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
  */
+class Calculator {
+  constructor() {
+    this.results = 0;
+  }
+  
+  number(number) {
+    this.results = number;
+    return this;
+  }
+  getResult() {
+    return this.results;
+  }
+  add(number) {
+    this.results += number;
+    return this;
+  }
+   subtract(number) {
+    this.results-= number;
+    return this;
+  }
+   divide(number) {
+    this.results /= number;
+    return this;
+  }
+   multiply(number) {
+    this.results *= number;
+    return this;
+  }
+ }
 
-// const res = calculator
-//   .number(10)
-//   .add(10)
-//   .divide(2)
-//   .multiply(4)
-//   .subtract(5)
-//   .getResult();
+const calculator = new Calculator()
 
-// console.log(res);
+const res = calculator
+  .number(10)
+  .add(10)
+  .divide(2)
+  .multiply(4)
+  .subtract(5)
+  .getResult();
 
-// const res2 = calculator
-//   .number(20)
-//   .subtract(40)
-//   .multiply(-8)
-//   .divide(160)
-//   .add(20)
-//   .getResult();
+//  console.log(res);
 
-// console.log(res2);
+const res2 = calculator
+  .number(20)
+  .subtract(40)
+  .multiply(-8)
+  .divide(160)
+  .add(20)
+  .getResult();
+
+//  console.log(res2);
 //! Приватні властивості
 //TODO:=========task-02=================
 /**
@@ -137,13 +168,39 @@ function callAction(callback) {
  * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
  */
 
-// const client = new Client('mango', 'mango@gmail.com');
+class Client{
+  #login;
+  #email;
+  constructor(login, email) {
+    this.#email = email;
+      this.#login = login;
+  }
+  // get getemail() {
+  //   console.log(this.#email);
+  // }
+  // get getlogin() {
+  //   console.log(this.#login);
+  // }
+  set changeEmail(newEmail) {
+    this.#email = newEmail;
+  }
+  set changeLogin(newLogin) {
+    this.#login = newLogin;
+  }
+  get getClientData() {
+    return {
+      login: this.#login,
+      email: this.#email
+    }
+  }
+}
+const client = new Client('mango', 'mango@gmail.com');
 
 // client.changeEmail = 'mango555@gmail.com';
 // console.log(client.getClientData.email);
 // client.changeLogin = '12345';
 // console.log(client.getClientData.login);
-
+// console.log(client);
 //! Статичний метод
 //TODO:=========task-03=================
 /**
