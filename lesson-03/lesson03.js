@@ -1,11 +1,33 @@
 //TODO:=========task-01=================
 // Створити об'єкт, який представляє користувача. У об'єкті повинні бути наступні поля: ім'я, прізвище, вік, email та метод, який виводить повну інформацію про користувача.
-
+// const user = {
+//   age: 4,
+//   userName: "Andrian",
+//   userSurname: "Pohrebniak",
+//   userEmail: "fff@ff",
+//   getInfo() {
+//     return this;
+//   },
+//   modify(key, newValue) {
+//     if (key !== "userName" && key !== "userSurname") {
+//       return "Error";
+//     }
+//     if (newValue[0] !== newValue[0].toUpperCase() || newValue.length < 3) { 
+//       return "error"
+//     }
+//     return (this[key] = newValue);
+//   },
+// };
+// console.log(person.getInfo());
+// const user = Object.create(person);
+// user.name = "Pavlo";
+// console.log(user.getInfo());
 //TODO:=========task-02=================
 // Для обьекта "user", написати метод для зміни ім'я або прізвища(змінити можна лише якесь з цих полів, змінювати або додавати нові потрібно заборонити) з перевіркою на валідність даних(Перша літера має бути у верхньому реєстрі, довжина слова не менше 3 літер)
 
-//? user.modify('firstName', 'Vlad');
-//? console.log(user.info());
+// console.log(user.modify("userSurname", "Appp"));
+// console.log(user.getInfo());
+// console.log(user.info());
 
 //TODO:=========task-03=================
 // Створити глобальну функцію для обьекта "user", що може додавати властивості об'єкту, в контексті якого вона буде викликана. Додати цю функцію як метод об'єкта user, та додати за допомогою неї властивість friends із значенням:
