@@ -1,23 +1,23 @@
 //TODO:=========task-01=================
 // Створити об'єкт, який представляє користувача. У об'єкті повинні бути наступні поля: ім'я, прізвище, вік, email та метод, який виводить повну інформацію про користувача.
-// const user = {
-//   age: 4,
-//   userName: "Andrian",
-//   userSurname: "Pohrebniak",
-//   userEmail: "fff@ff",
-//   getInfo() {
-//     return this;
-//   },
-//   modify(key, newValue) {
-//     if (key !== "userName" && key !== "userSurname") {
-//       return "Error";
-//     }
-//     if (newValue[0] !== newValue[0].toUpperCase() || newValue.length < 3) { 
-//       return "error"
-//     }
-//     return (this[key] = newValue);
-//   },
-// };
+const user = {
+  age: 4,
+  userName: "Andrian",
+  userSurname: "Pohrebniak",
+  userEmail: "fff@ff",
+  getInfo() {
+    return this;
+  },
+  modify(key, newValue) {
+    if (key !== "userName" && key !== "userSurname") {
+      return "Error";
+    }
+    if (newValue[0] !== newValue[0].toUpperCase() || newValue.length < 3) {
+      return "error"
+    }
+    return (this[key] = newValue);
+  },
+};
 // console.log(person.getInfo());
 // const user = Object.create(person);
 // user.name = "Pavlo";
@@ -31,29 +31,33 @@
 
 //TODO:=========task-03=================
 // Створити глобальну функцію для обьекта "user", що може додавати властивості об'єкту, в контексті якого вона буде викликана. Додати цю функцію як метод об'єкта user, та додати за допомогою неї властивість friends із значенням:
+function addProperty(key, value) {
+  this[key] = value;
+}
+user.addProperty = addProperty
+user.addProperty('friends', [
+  {
+    firstName: 'Mary',
+    lastName: 'Smith',
+    age: 32,
+    email: 'marysmith@hotmail.com',
+  },
+  {
+    firstName: 'Alex',
+    lastName: 'Johnson',
+    age: 45,
+    email: 'alex.johnson@yahoo.com',
+  },
+  {
+    firstName: 'Emily',
+    lastName: 'Davis',
+    age: 19,
+    email: 'emilydavis@gmail.com',
+  },
+]);
 
-// user.addProperty('friends', [
-//   {
-//     firstName: 'Mary',
-//     lastName: 'Smith',
-//     age: 32,
-//     email: 'marysmith@hotmail.com',
-//   },
-//   {
-//     firstName: 'Alex',
-//     lastName: 'Johnson',
-//     age: 45,
-//     email: 'alex.johnson@yahoo.com',
-//   },
-//   {
-//     firstName: 'Emily',
-//     lastName: 'Davis',
-//     age: 19,
-//     email: 'emilydavis@gmail.com',
-//   },
-// ]);
 
-//? console.log(user);
+console.log(user.getInfo());
 
 //TODO:=========task-04=================
 //  Викликати метод user.info() таким чином, щоб він вивів результатом  ({name: 'Bob', lastName: 'Lasso',age: 50, email: 'BodLasso@gmail.com'})
