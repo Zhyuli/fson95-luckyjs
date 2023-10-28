@@ -57,24 +57,30 @@ user.addProperty('friends', [
 ]);
 
 
-console.log(user.getInfo());
+// console.log(user.getInfo());
 
 //TODO:=========task-04=================
 //  Викликати метод user.info() таким чином, щоб він вивів результатом  ({name: 'Bob', lastName: 'Lasso',age: 50, email: 'BodLasso@gmail.com'})
 
-// const obj = {
-//   name: 'Bob',
-//   lastName: 'Lasso',
-//   age: 50,
-//   email: 'BodLasso@gmail.com',
-// };
+const obj = {
+  name: 'Bob',
+  lastName: 'Lasso',
+  age: 50,
+  email: 'BodLasso@gmail.com',
+};
+
+// console.log(user.getInfo.call(obj));
 
 //TODO:=========task-05=================
 //  Викличте функцію showFullName у контексті об'єкта user
 
-// const showFullName = function (message, number) {
-//   console.log(`${message} ${this.firstName} ${this.lastName} ${number}`);
-// };
+const showFullName = function (message, number) {
+  console.log(`${message} ${this.name} ${this.lastName} ${number}`);
+};
+
+// showFullName.call(obj, 'Hello ', 5);
+// showFullName.apply(obj, ['Hello ', 5]);
+
 
 //TODO:=========task-06=================
 // Виправте помилки, щоб код працював
@@ -91,7 +97,8 @@ function callAction(callback) {
   callback();
 }
 
-// callAction(product.showPrice);
+// callAction(product.showPrice.bind(product));
+
 
 //* Прототипи та класи
 //TODO:=========task-01=================
