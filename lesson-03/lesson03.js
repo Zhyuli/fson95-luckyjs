@@ -213,6 +213,30 @@ const client = new Client('mango', 'mango@gmail.com');
  * - updatePriority(text, newPriority)
  */
 
+// class Notes {
+//   static Priority() {
+//     return {
+//       HIGHT: "hight",
+//       LOW: "low",
+//     }
+//   }
+//   constructor() {
+//     this.items = [];
+//   }
+//   addNote(note) {
+//     return this.items.push(note);
+//   }
+//   removeNote(noteText) {
+//     return this.items = this.items.filter(({ text }) => text !== noteText);
+//   }
+//   updatePriority({ text, newPriority }) {
+//     const index = this.items.findIndex(element => element.text === text);
+//     if (index !== -1) {
+//       this.items[index].priority = newPriority;
+//     }
+// }
+  
+// }
 // const note1 = new Notes();
 
 // note1.addNote({ text: 'Note1', priority: Notes.Priority().LOW });
