@@ -6,18 +6,48 @@
  * яка повертатиме масив елементів(масив з лішками).
  */
 
-// const appendFruitList = ['apple🍎', 'banana🍌'];
-// const prependFruitList = ['grapes🍇', 'orange🍊'];
-// const beforeFruitList = ['strawberry🍓', 'cherry🍒'];
-// const afterFruitList = ['peach🍑', 'kiwi🥝'];
+const appendFruitList = ["apple🍎", "banana🍌"];
+const prependFruitList = ["grapes🍇", "orange🍊"];
+const beforeFruitList = ["strawberry🍓", "cherry🍒"];
+const afterFruitList = ["peach🍑", "kiwi🥝"];
+const textElement = document.querySelector(".task-title");
+const ulElement = document.createElement("ul");
 
+// const liArray = (array) => {  
+//     return array.map((element) => { 
+//         const liElement = document.createElement("li"); 
+//          liElement.textContent = element; 
+//         return liElement;  
+//     });
+    
+// }; 
+// // ulElement.append(...liArray(beforeFruitList)); 
+// // ulElement.prepend(...liArray(afterFruitList));
+// ulElement.append(...liArray(appendFruitList)); 
+// ulElement.insertAdjacentElement('beforebegin' , ...liArray(beforeFruitList))
+// textElement.before(ulElement); 
+
+// textElement.before(ulElement); //after
+// console.log(liArray(appendFruitList));
 //TODO:=========task-02=================
 // 3. Вставте даний текст в html документ, а потім виділіть усі слова, які мають більше 8 символів у тексті абзацу (наприклад, жовтим фоном).
 
-// const text = `Об'єктна модель документа (Document Object Model) - незалежний від мови інтерфейс для роботи з HTML-документом. Містить набір властивостей і методів, що дозволяють шукати, створювати і видаляти елементи, реагувати на дії користувача і багато іншого. Тобто з'єднує сторінку з мовою програмування.`;
+const text = `Об'єктна модель документа (Document Object Model) - незалежний від мови інтерфейс для роботи з HTML-документом. Містить набір властивостей і методів, що дозволяють шукати, створювати і видаляти елементи, реагувати на дії користувача і багато іншого. Тобто з'єднує сторінку з мовою програмування.`;
 
-// const words = text.split(/\s+/); // Розбиваємо текст на слова за допомогою роздільників (пробіли, коми, крапки і т.д.)
-
+const words = text.split(/\s+/); // Розбиваємо текст на слова за допомогою роздільників (пробіли, коми, крапки і т.д.)
+console.log(words);
+const pElement = document.createElement("p");
+for (const word of words) {
+    if (word.length > 8) { 
+        const spanElement = document.createElement('span');
+        spanElement.style.backgroundColor = 'yellow';
+        spanElement.textContent = word + " "; 
+        pElement.appendChild(spanElement); 
+    } else { 
+        pElement.innerHTML += word + " "; 
+    }
+}
+textElement.after(pElement); 
 //TODO:=========task-03=================
 // Створіть контейнер div (з класом numberContainer )в HTML-документі та динамічно створіть 100 блоків (з класом number) наповнивши їх рандомними числами від 1 до 100 і додайте їх до контейнера div(numberContainer). Парні числа повинні мати зелений фон (додати клас even), Непарні числа - жовтий фон (додати клас odd).
 
