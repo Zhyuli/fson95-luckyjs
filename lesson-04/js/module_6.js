@@ -51,8 +51,33 @@ textElement.after(pElement);
 //TODO:=========task-03=================
 // Створіть контейнер div (з класом numberContainer )в HTML-документі та динамічно створіть 100 блоків (з класом number) наповнивши їх рандомними числами від 1 до 100 і додайте їх до контейнера div(numberContainer). Парні числа повинні мати зелений фон (додати клас even), Непарні числа - жовтий фон (додати клас odd).
 
-// const randomNumber = () => Math.floor(Math.random() * 100) + 1;
-// const BLOCKS = 100;
+const randomNumber = () => Math.floor(Math.random() * 100) + 1;
+const BLOCKS = 400;
+
+const divContainerEl = document.createElement('div');
+divContainerEl.classList.add('number-container');
+
+const divsArr = []
+
+for (let i = 0; i < BLOCKS; i += 1) {
+    const divEl = document.createElement('div');
+    divEl.classList.add('number');
+    divEl.textContent = randomNumber();
+
+    divEl.textContent % 2 === 0
+        ? divEl.classList.add('even')
+        : divEl.classList.add('odd')
+    
+    divsArr.push(divEl)
+}
+
+divContainerEl.append(...divsArr)
+
+console.log(divContainerEl);
+
+textElement.after(divContainerEl)
+
+
 
 //TODO:=========task-04=================
 /**
@@ -70,14 +95,67 @@ textElement.after(pElement);
  */
 
 // find refs
+const inputEl = document.querySelector('.js-username-input');
+
+const formEl = document.querySelector('.js-contact-form')
 
 //TODO:===========1===============
+// inputEl.addEventListener('input', (evt) => {
+//     const input = evt.target;
+//     if (input.value.trim().length > 6) {
+//         input.classList.add('success')
+//         input.classList.remove('error')
+
+//     } else {
+//         input.classList.remove('success')
+//         input.classList.add('error')
+//     }
+// })
 
 //TODO:===========2===============
+// inputEl.addEventListener('focus', (evt) => {
+//     const input = evt.target;
+//     input.value.trim() === ''
+//         ? input.style.outline = '3px solid red'
+//         : input.style.outline = '3px solid green'
+//     console.log(input === ''
+// );
+//  })
+
 
 //TODO:===========3===============
+// inputEl.addEventListener('blur', (evt) => {
+//     const input = evt.target;
+//     input.value.trim() === ''
+//         ? input.style.outline = '3px solid red'
+//         : input.style.outline = '3px solid lime'
+//     console.log(input === ''
+// );
+//  })
 
 //TODO:===========4===============
+formEl.addEventListener('submit', onSubmit)
+formEl.addEventListener('input', () => {
+    spanEl.textContent = inputEl.value || 'Anonymous'
+})
+
+const spanEl = document.querySelector('.js-username-output')
+
+function onSubmit(evt) {
+    evt.preventDefault();
+    const { userName, accept } = evt.target.elements;
+
+    if (!userName.value.trim() || !accept.checked) {
+        return alert('Введіть дані')
+    } 
+
+    console.log({ userName: userName.value });
+
+    evt.target.reset()
+
+    spanEl.textContent = 'Anonymous'
+
+}
 
 //TODO:=========task-05=================
 // Кнопка "Зменшити" робить квадрат меншим на 20 пікселів, кнопка "Збільшити" - робить більшим на 10 пікселів.
