@@ -24,3 +24,43 @@ listRef.addEventListener('click', handleBtnClick);
  * Використовуй поширення подій.Додавай клас`active` на поточну сторінку. Створи допоміжну функцію`updateActivePage`, яка повинна обновляти активний клас.
  * Функція`handleClick`повинна викликатися коли відбувається клік на елементі`pagination`.
  */
+
+const ulEl = document.querySelector(".js-pagination");
+ulEl.addEventListener('click', updateActivePage);
+function updateActivePage(evt) {
+    const currentBtn = evt.target;
+    console.log(currentBtn);
+
+    if (currentBtn.nodeName !== 'LI') {
+        return;
+    
+    }
+    const activeBtn = ulEl.querySelector('.active');
+    console.log(activeBtn);
+
+    if (currentBtn.dataset.type === 'page') {
+        activeBtn.classList.remove('active');
+        currentBtn.classList.add('active');
+    }
+    if (currentBtn.dataset.type === 'prev') {
+        const prevBtnPage = activeBtn.dataset.page - 1;
+        const prevBtn = ulEl.querySelector(`[data-page="${prevBtnPage}"]`);
+        
+        if (prevBtn) {
+        activeBtn.classList.remove('active');
+        prevBtn.classList.add('active');
+        }
+        
+    }
+
+     if (currentBtn.dataset.type === 'next') {
+        const nextBtnPage = Number(activeBtn.dataset.page) + 1;
+        const nextBtn = ulEl.querySelector(`[data-page="${nextBtnPage}"]`);
+        
+        if (nextBtn) {
+        activeBtn.classList.remove('active');
+        nextBtn.classList.add('active');
+        }
+        
+    }
+}
