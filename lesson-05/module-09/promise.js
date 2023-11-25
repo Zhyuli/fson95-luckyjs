@@ -4,9 +4,15 @@
  * через 2 секунди після виклику функції
  */
 
-function greet() {
-  return 'hello world';
-}
+// function greet() {
+//   return new Promise(resolve => {
+//     setTimeout(() => {
+//       resolve('hello world');
+//     }, 2000);
+//   }).then(response => console.log(response))
+// }
+
+// greet()
 
 //TODO:====================02==========================
 /**
@@ -68,3 +74,17 @@ const getLastData = () =>
  * Якщо значення парне, вирішуй проміс і повертай "even" через 1 секунду.
  * Якщо значення не парне, вирішуй проміс і повертай "odd" через 2 секунди.
  */
+
+function checkValue(value) {
+  return new Promise((resolve, reject) => {
+  
+    if (!value || isNaN(value)) reject('error')
+    if (value % 2 === 0) setTimeout(() => resolve('even'), 1000)
+    
+    setTimeout(() => resolve('odd'), 2000)
+})
+}
+const value = prompt('Paste value')
+checkValue(value)
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error))
