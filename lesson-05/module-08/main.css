@@ -201,6 +201,11 @@ input:checked + .round::before {
   --main-font: white;
 }
 
+body.dark h1, body.dark h2, body.dark button{
+  color: white;
+}
+
+
 .light {
   --main-background: white;
   --main-font: hsl(230, 17%, 14%);
